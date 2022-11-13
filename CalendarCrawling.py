@@ -1,6 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
 
+#파이어베이스 연동
+import firebase_admin
+from firebase_admin import credentials
+
+cred = credentials.Certificate("path/to/serviceAccountKey.json")
+firebase_admin.initialize_app(cred)
+
+
 undergraduate_schedule = []
 graduate_schedule = []
 
